@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { StatusBar } from 'expo-status-bar';
+import OpenModal from './components/Modal';
 import { Button, Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [modalvisible,setModalVisible] =useState(false)
   return (
     <View style={{ backgroundColor: "aqua", flex: 1, paddingTop: 40 }}>
       <Text style={{ fontSize: 25, fontWeight: "bold" }}>Hello world</Text>
@@ -14,8 +17,10 @@ export default function App() {
         </Pressable>
         <ImageBackground source={{ uri: "https://picsum.photos/200" }} style={{ height: 300, width: "100%", marginTop: 20 }}><Text style={{ color: "white", fontSize: 20 }}>Here is the background</Text></ImageBackground>
         <Button onPress={() => console.log("button pressed")} title='Click here' color={'midnightblue'} style={{ borderRadius: 5, padding: 5 }} />
+       <Button onPress={()=>setModalVisible(true)} title='Open modal'/>
       </ScrollView>
       <StatusBar style="auto" />
+      <OpenModal modalvisible={modalvisible} setModalVisible={setModalVisible}></OpenModal>
     </View>
   );
 }
