@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import OpenModal from './components/Modal';
 import { ActivityIndicator, useWindowDimensions, Alert, Button, Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Box from "./components/box";
+import Lists from "./components/Lists";
 
 export default function App() {
   const [modalvisible, setModalVisible] = useState(false)
@@ -38,6 +39,7 @@ export default function App() {
           <View style={[styles.welcomeBox, { height: windowWidth > 400 ? 200 : 300, width: windowWidth > 400 ? '90%' : '80%' }]}>
             <Text style={{ fontSize: windowWidth > 400 ? 40 : 20 }}>Welcome text</Text>
           </View>
+          <Lists></Lists>
         </ScrollView>
        
         <OpenModal modalvisible={modalvisible} setModalVisible={setModalVisible}></OpenModal>

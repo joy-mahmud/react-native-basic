@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "base_experience": 64,
+      "height": 7,
+      "weight": 69
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "type": "Fire",
+      "base_experience": 62,
+      "height": 6,
+      "weight": 85
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "type": "Water",
+      "base_experience": 63,
+      "height": 5,
+      "weight": 90
+    },
+    {
+      "id": 10,
+      "name": "Caterpie",
+      "type": "Bug",
+      "base_experience": 39,
+      "height": 3,
+      "weight": 29
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "type": "Electric",
+      "base_experience": 112,
+      "height": 4,
+      "weight": 60
+    },
+    {
+      "id": 39,
+      "name": "Jigglypuff",
+      "type": "Normal",
+      "base_experience": 95,
+      "height": 5,
+      "weight": 55
+    },
+    {
+      "id": 52,
+      "name": "Meowth",
+      "type": "Normal",
+      "base_experience": 58,
+      "height": 4,
+      "weight": 42
+    },
+    {
+      "id": 63,
+      "name": "Abra",
+      "type": "Psychic",
+      "base_experience": 62,
+      "height": 9,
+      "weight": 195
+    },
+    {
+      "id": 92,
+      "name": "Gastly",
+      "type": "Ghost",
+      "base_experience": 62,
+      "height": 13,
+      "weight": 1
+    },
+    {
+      "id": 133,
+      "name": "Eevee",
+      "type": "Normal",
+      "base_experience": 65,
+      "height": 3,
+      "weight": 65
+    }
+  ]
+  
