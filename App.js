@@ -1,24 +1,26 @@
 import { useState } from "react"
-import { StatusBar } from 'expo-status-bar';
+
 import OpenModal from './components/Modal';
-import { ActivityIndicator, useWindowDimensions, Alert, Button, Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { ActivityIndicator, useWindowDimensions, Alert, Button, Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View, SafeAreaView,StatusBar } from 'react-native';
 import Box from "./components/box";
 import Lists from "./components/Lists";
+import FetchData from "./components/FetchData";
 
 export default function App() {
   const [modalvisible, setModalVisible] = useState(false)
   const windowHeight = useWindowDimensions().height
   const windowWidth = useWindowDimensions().width
   return (
-    <SafeAreaView style={{flex:1,backgroundColor:"black"}}>
-       {/* <StatusBar backgroundColor="lightgreen" barStyle="dark-content" /> */}
-      <View style={styles.container}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
       
+      {/* <StatusBar backgroundColor="lightgreen" barStyle="dark-content" /> */}
+      <View style={[styles.container,{paddingTop:StatusBar.currentHeight}]}>
+
         {/* <ActivityIndicator size={'large'} color={'midnightblue'}/> */}
 
 
-        <ScrollView>
-        <Text style={styles.header}>Hello world</Text>
+        <ScrollView nestedScrollEnabled={true}>
+          <Text style={styles.header}>Hello world</Text>
           <Image source={{ uri: "https://picsum.photos/seed/picsum/200/300" }} style={{ height: 400, width: "100%" }} />
           <Pressable onLongPress={() => console.log("text long pressed ")}>
             <Text>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </Text>
@@ -40,8 +42,11 @@ export default function App() {
             <Text style={{ fontSize: windowWidth > 400 ? 40 : 20 }}>Welcome text</Text>
           </View>
           <Lists></Lists>
+          <FetchData></FetchData>
         </ScrollView>
-       
+        
+
+
         <OpenModal modalvisible={modalvisible} setModalVisible={setModalVisible}></OpenModal>
 
         <Button title="Alert button" onPress={() => Alert.alert("Invalid data", "dob missing", [{ text: "cancel", onPress: () => console.log("cancel Pressed") }, { text: 'Ok', onPress: () => console.log("ok pressed") }])} style={{ borderRadius: 5 }} />
