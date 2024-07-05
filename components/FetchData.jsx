@@ -23,8 +23,8 @@ const FetchData = () => {
         renderItem={({item})=>{
             return(
                 <View style={styles.postContainer} key={item.id}>
-                    <Text styles={{fontWeight:500,fontSize:20}}>{item.title}</Text>
-                    <Text  styles={{fontWeight:500,fontSize:20}}>{item.body}</Text>
+                    <Text style={{fontWeight:500,fontSize:20,}}>{item.title}</Text>
+                    <Text  style={{fontWeight:400,fontSize:18}}>{item.body}</Text>
                 </View>
             )
         }}
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
         padding:5,
         borderWidth: 2,
          borderColor: 'black',
-         borderRadius:5
+         borderRadius:5,
+      
     }
 })
